@@ -8,7 +8,7 @@ RUN apt-get install -y varnish
 
 ADD start.sh /
 ADD default.vcl /etc/varnish/
-ADD ./lib /etc/varnish/
+ADD ./lib /etc/varnish/lib
 ADD haproxy.cfg /usr/local/etc/haproxy/
 
 ENV CACHE_SIZE=128m
