@@ -9,7 +9,7 @@ RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish60/
 
 RUN apt-get install -y varnish
 
-ADD start.sh /
+ADD varnish.sh /
 ADD default.vcl /etc/varnish/
 ADD ./lib /etc/varnish/lib
 ADD haproxy.cfg /usr/local/etc/haproxy/
