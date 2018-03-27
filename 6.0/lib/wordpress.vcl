@@ -1,5 +1,3 @@
-import std;
-
 ### WordPress-specific config ###
 sub vcl_recv {
     # pipe on weird http methods
