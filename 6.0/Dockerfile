@@ -2,7 +2,7 @@ FROM haproxy:latest
 
 RUN apt-get update && apt-get install -y curl
 
-RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64
+RUN curl -s https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 -o /usr/local/bin/dumb-init
 RUN chmod +x /usr/local/bin/dumb-init
 
 RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish60/script.deb.sh | bash
